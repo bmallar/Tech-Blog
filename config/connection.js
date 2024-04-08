@@ -4,9 +4,9 @@ require('dotenv').config();
 
 
 
-if (process.env.DB_URL) {
-  sequelize = new Sequelize(process.env.DB_URL);
-} else {
+// if (process.env.DB_URL) {
+//   sequelize = new Sequelize(process.env.DB_URL);
+// } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -16,4 +16,6 @@ if (process.env.DB_URL) {
       dialect: 'postgres',
     },
   );
-}
+// }
+
+module.exports = sequelize;
